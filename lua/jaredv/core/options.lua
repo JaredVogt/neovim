@@ -5,6 +5,9 @@
 local o = vim.opt -- for conciseness
 local a = vim.api -- for conciseness
 
+-- behavior
+o.timeoutlen = 500
+
 -- history/undo
 o.history = 1000
 o.undolevels = 1000

@@ -34,4 +34,11 @@ nvimtree.setup({
 			},
 		},
 	},
+	view = {
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
 })

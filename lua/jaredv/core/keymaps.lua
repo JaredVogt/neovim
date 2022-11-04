@@ -20,13 +20,19 @@ map("n", "x", '"_x')  -- deletes letter but doesn't put it in register!
 map("n", "<leader>u", "<C-r>")  -- redo 
 map("n", "dw", "daw")  -- delete word anywhere in it
 map("n", "<leader>;", "g;")  -- jump back to last edit 
+-- map("n", "<leader>o", "<crtl>o")  -- jump back to last edit FIXME not working
 map("n", "<ESC><ESC><ESC>", ":nohl<CR>")  -- clear search highlight
+map("n", "<leader>s", ":setlocal spell!<cr>")  -- clear search highlight
 
 -- Command window with history
 map("n", ":", "q:a") 
 map("n", "/", "q/a") 
 map("n", "?", "q?a") 
 
+-- Edit options
+map("n", "<leader>es", ":tabe ~/.config/nvim/lua/jaredv/core/keymaps.lua<cr>")  -- clear search highlight
+map("n", "<leader>eo", ":tabe ~/.config/nvim/lua/jaredv/core/options.lua<cr>")  -- clear search highlight
+map("n", "<leader>ep", ":tabe ~/.config/nvim/lua/jaredv/plugins-setup.lua<cr>")  -- clear search highlight
 
 -- window management
 map("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -49,6 +55,7 @@ map('n', '<leader><tab>', '<Cmd>BufferClose<CR>')
 map('n', '<leader>r', ':so $MYVIMRC<CR>')  -- reload config without restart nvim
 map('n', '<leader>w', ':w<CR>')  -- fast save
 map('n', '<leader>q', ':q<CR>')  -- fast quit
+map('n', '<leader>wq', ':wq<CR>')  -- fast quit
 
 
 ----------------------
