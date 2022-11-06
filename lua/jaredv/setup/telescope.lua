@@ -1,3 +1,7 @@
+-----------------------------------------------------------
+-- Initiate telescope and set options 
+-----------------------------------------------------------
+
 -- import telescope plugin safely
 local telescope_setup, telescope = pcall(require, "telescope")
 if not telescope_setup then

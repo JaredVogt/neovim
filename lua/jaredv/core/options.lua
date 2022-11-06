@@ -5,6 +5,9 @@
 local o = vim.opt -- for conciseness
 local a = vim.api -- for conciseness
 
+-- guivim
+o.guifont = { "Monoco", "h15" }
+
 -- behavior
 o.timeoutlen = 500
 
@@ -55,6 +58,15 @@ o.iskeyword:append("-") -- consider string-string as whole word
 -- :set ww=
 o.ww = "<,>,h,l" -- FIXME this doesn't look like its working
 
+
+-- TODO move these to appropriate headers
+o.scrolloff = 5 -- could be 1
+o.sidescrolloff = 5  -- Minimum nr. of lines above and below cursor
+o.showmatch = true  -- Briefly jump to matching bracket if insert one
+o.ruler = true  -- Show cursor line and column in the status line
+o.autoread = true  -- Autom. read file when changed outside of Vim
+o.linebreak = true  -- Wrap long lines at a blank
+o.autowrite = true  -- Autom. save file before some action
 
 -- " setup the cross hairs
 -- hi CursorLine   cterm=NONE ctermbg=black guibg=#330000          " guifg=white  ctermfg=lightblue  overrides the colors on highlighted characters - disconcerting, but distinct

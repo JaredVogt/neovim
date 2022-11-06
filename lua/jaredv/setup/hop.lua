@@ -4,7 +4,11 @@ if not status_ok then
   return
 end
 
-hop.setup { keys = 'etovxqpdygfblzhckisuran' } 
+hop.setup { 
+  multi_windows = true,  
+  uppercase_labels = true,
+  keys = 'etovxqpdygfblzhckisuran' 
+} 
 -- normal mode (easymotion-like)
 vim.api.nvim_set_keymap("n", "<Leader><Leader>b", "<cmd>HopWord<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<Leader><Leader>j", "<cmd>HopLine<CR>", {noremap=true})

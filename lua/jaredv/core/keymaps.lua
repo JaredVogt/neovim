@@ -22,7 +22,15 @@ map("n", "dw", "daw")  -- delete word anywhere in it
 map("n", "<leader>;", "g;")  -- jump back to last edit 
 -- map("n", "<leader>o", "<crtl>o")  -- jump back to last edit FIXME not working
 map("n", "<ESC><ESC><ESC>", ":nohl<CR>")  -- clear search highlight
+
+
+-- Spelling
 map("n", "<leader>s", ":setlocal spell!<cr>")  -- clear search highlight
+map("n", "<leader>sn", "]s")  -- go to next word
+map("n", "<leader>sp", "[s")  -- go to previous word
+map("n", "<leader>su", "=z")  -- suggestion alternatives
+map("n", "<leader>sd", "zg")  -- Add to dictionary
+map("n", "<leader>sug", "zug")  -- Remove from dictionary
 
 -- Command window with history
 map("n", ":", "q:a") 
@@ -40,10 +48,10 @@ map("n", "<leader>sh", "<C-w>s") -- split window horizontally
 map("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 map("n", "<leader>sx", ":close<CR>") -- close current split window
 
--- map("n", "<leader>to", ":tabnew<CR>") -- open new tab
--- map("n", "<leader>tx", ":tabclose<CR>") -- close current tab
--- map("n", "<leader>9", ":tabn<CR>") --  go to next tab
--- map("n", "<leader>0", ":tabp<CR>") --  go to previous tab
+map("n", "<leader>to", ":tabnew<CR>") -- open new tab
+map("n", "<leader>tx", ":tabclose<CR>") -- close current tab
+map("n", "<leader>9", ":tabn<CR>") --  go to next tab
+map("n", "<leader>0", ":tabp<CR>") --  go to previous tab
 
 -- barbar
 map('n', '<leader>-', '<Cmd>BufferPick<CR>')
@@ -69,11 +77,17 @@ map("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current
 map("n", "<leader>fc", "<cmd>Telescope grep_string<cr>") -- find string under cursor in current working directory
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>") -- list open buffers in current neovim instance
 map("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available help tags
+map("n", "<leader>fm", "<cmd>Telescope commands<cr>") -- list available commandsj
+map("n", "<leader>fr", "<cmd>Telescope registers<cr>") -- list available commandsj
 
 
 ----------------------
 -- Jared's extras 
 ----------------------
+-- move one up/down display line instead of physicial line
+map("n", "j", "gj")
+map("n", "k", "gk")
+
 
 -- "" <L>u        - select word under cursor and prep for replace - http://vim.wikia.com/wiki/Search_and_replace_the_word_under_the_cursor NOTE: <Left> kicks the cursor back to left
 -- map('n', '<leader>u', ':%s/\<<C-r><C-w>\>//gc<Left><Left>Left>')

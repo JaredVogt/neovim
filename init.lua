@@ -22,3 +22,4 @@ require(user .. ".core.options")
 -- require(user .. ".core.keymapsWithDesc")  -- experimental 
 require(user .. ".core.keymaps")
 require(user .. ".core.colorscheme")
+require(user .. ".setup.firenvim")  -- TODO this has to be configured - empty file at this point

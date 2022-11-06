@@ -62,6 +62,14 @@ return packer.startup(function(use)
   }
   require (userName .. plugSetupDir .. ".hop")  -- grab config
   
+  -- git stuff
+  use({
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require(userName .. plugSetupDir .. ".gitsigns").setup()
+    end,
+    -- requires = "nvim-lua/plenary.nvim",
+  })
 
   -- shortcut help
   use("folke/which-key.nvim")
@@ -114,6 +122,12 @@ return packer.startup(function(use)
     run = function()
     require("nvim-treesitter.install").update({ with_sync = true })
     end,
+  })
+
+  -- setup firenvim for browser use
+  use({
+    'glacambre/firenvim',
+    run = function() vim.fn['firenvim#install'](0) end
   })
 
   -- Put this at the end after all plugins
