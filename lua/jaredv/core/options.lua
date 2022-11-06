@@ -39,6 +39,7 @@ o.cursorcolumn = true -- highlight the current cursor line
 o.termguicolors = true
 o.background = "dark" -- colorschemes that can be light or dark will be made dark
 o.signcolumn = "yes" -- show sign column so that text doesn't shift
+o.pumblend = 15  -- pseudo-transparency of pop-menu
 -- o.NVIM_TUI_ENABLE_TRUE_COLOR = 1  -- FIXME turn on True Color (this may not be relevant)
 
 -- backspace
